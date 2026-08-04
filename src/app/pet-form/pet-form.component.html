@@ -1,0 +1,137 @@
+<form [formGroup]="petForm" class="custom-form" (ngSubmit)="onSubmit()">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Name</mat-label>
+          <input matInput type="text" placeholder="Ex. Kelly" formControlName="PetName">
+        </mat-form-field>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Age</mat-label>
+          <input matInput type="text" placeholder="Ex. --" formControlName="PetAge">
+        </mat-form-field>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Date Of Add</mat-label>
+          <input matInput [matDatepicker]="picker1" formControlName="DateOfAdd">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Date Of Exit</mat-label>
+          <input matInput [matDatepicker]="picker2" formControlName="DateOfExit">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="PetGender">
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+            <mat-option value="others">Others</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Category</mat-label>
+          <mat-select formControlName="PetCategory">
+            <mat-option value="Cat">Cat</mat-option>
+            <mat-option value="Dog">Dog</mat-option>
+            <mat-option value="Birds">Birds</mat-option>
+            <mat-option value="Fish">Fish</mat-option>
+            <mat-option value="Horse">Horse</mat-option>
+            <mat-option value="Rabbits">Rabbits</mat-option>
+            <mat-option value="Ferret">Ferret</mat-option>
+            <mat-option value="Hamster">Hamster</mat-option>
+            <mat-option value="Parrot">Parrot</mat-option>
+            <mat-option value="Mice">Mice</mat-option>
+            <mat-option value="Turtle">Turtle</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Routine</mat-label>
+          <mat-select formControlName="PetRoutine">
+            <mat-option value="Morning">Morning</mat-option>
+            <mat-option value="Evening">Evening</mat-option>
+            <mat-option value="Night">Night</mat-option>
+            <mat-option value="After1Day">After 1 Day</mat-option>
+            <mat-option value="After3Day">After 3 Day</mat-option>
+            <mat-option value="After1Week">After 1 Week</mat-option>
+            <mat-option value="After1Month">After 1 Month</mat-option>
+            <mat-option value="ThreeTimesinDay">Three Times in Day</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Food</mat-label>
+          <input matInput type="text" placeholder="Ex. Cooked Food" formControlName="PetFood">
+        </mat-form-field>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Diet Routine</mat-label>
+          <mat-select formControlName="PetDietRoutine">
+            <mat-option value="Morning">Morning</mat-option>
+            <mat-option value="Evening">Evening</mat-option>
+            <mat-option value="Night">Night</mat-option>
+            <mat-option value="After1Hour">After 1 Hour</mat-option>
+            <mat-option value="ThreeTimesinDay">Three Times in Day</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Dose Type</mat-label>
+          <mat-select formControlName="PetDose">
+            <mat-option value="Ointment">Ointment</mat-option>
+            <mat-option value="Liquid">Liquid</mat-option>
+            <mat-option value="Drops">Drops</mat-option>
+            <mat-option value="TherapeuticDose">Therapeutic Dose</mat-option>
+            <mat-option value="Sub-TherapeuticDose">Sub-Therapeutic Dose</mat-option>
+            <mat-option value="ToxicDose">Toxic Dose</mat-option>
+            <mat-option value="LethalDose(LD50)">Lethal Dose (LD50)</mat-option>
+            <mat-option value="MedianEffectiveDose(ED50)">Median Effective Dose (ED50)</mat-option>
+            <mat-option value="ProphylacticDose">Prophylactic Dose</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-lg-6 col-md-6 mt-3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Pet Dose Routine</mat-label>
+          <mat-select formControlName="PetDoseRoutine">
+            <mat-option value="Morning">Morning</mat-option>
+            <mat-option value="Evening">Evening</mat-option>
+            <mat-option value="Night">Night</mat-option>
+            <mat-option value="After1Hour">After 1 Hour</mat-option>
+            <mat-option value="ThreeTimesinDay">Three Times in Day</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <button class="mx-3" mat-flat-button color="primary" type="submit">Submit</button>
+        <button mat-flat-button color="warn" type="button" (click)="reset()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</form>

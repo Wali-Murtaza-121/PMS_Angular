@@ -1,0 +1,41 @@
+<mat-card class="centered-card">
+  <mat-card-content>
+    <div class="main-body">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Pet ID Column -->
+        <ng-container matColumnDef="paymentDetailId">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.paymentDetailId}} </td>
+        </ng-container>
+    
+        <!-- Pet Name Column -->
+        <ng-container matColumnDef="cardOrnerName">
+          <th mat-header-cell *matHeaderCellDef> Card Owner Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.cardOrnerName}} </td>
+        </ng-container>
+    
+        <!-- Pet Age Column -->
+        <ng-container matColumnDef="cardOrnernumber">
+          <th mat-header-cell *matHeaderCellDef> Card Owner Number  </th>
+          <td mat-cell *matCellDef="let element"> {{element.cardOrnernumber}} </td>
+        </ng-container>
+    
+        <!-- Date of Add Column -->
+        <ng-container matColumnDef="expirationDate">
+          <th mat-header-cell *matHeaderCellDef> Expiration Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.expirationDate}} </td>
+        </ng-container>
+    
+        <!-- Date of Exit Column -->
+        <ng-container matColumnDef="securityDate">
+          <th mat-header-cell *matHeaderCellDef> Security Cose </th>
+          <td mat-cell *matCellDef="let element"> {{element.securityDate}} </td>
+        </ng-container>
+    
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

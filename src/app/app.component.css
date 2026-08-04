@@ -1,0 +1,44 @@
+.navbar-brand.light,
+  .nav-link.active {
+    color: white; /* Set text color to white */
+  }
+  /* Make sure the navbar takes full height and width */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 10%;
+  background-color: rgb(27 75 190);
+  padding: 10px;
+   /* Ensure it stays on top of other content */
+}
+
+/* Adjust the navbar-brand padding */
+.navbar-brand {
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+/* Ensure the navbar content is centered vertically */
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Adjust navbar collapse to be full width */
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+/* Ensure the navbar toggler is correctly aligned */
+.navbar-toggler {
+  margin-right: 1rem;
+}
+
+/* Add padding to body to prevent content from being hidden under the fixed navbar */
+body {
+  padding-top: 70px; /* Adjust this value based on your navbar height */
+}

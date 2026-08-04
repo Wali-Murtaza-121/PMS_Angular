@@ -1,0 +1,94 @@
+<mat-card class="centered-card">
+  <mat-card-content>
+    <div class="main-body">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Pet ID Column -->
+        <ng-container matColumnDef="petId">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.petId}} </td>
+        </ng-container>
+    
+        <!-- Pet Name Column -->
+        <ng-container matColumnDef="petName">
+          <th mat-header-cell *matHeaderCellDef> Pet Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.petName}} </td>
+        </ng-container>
+    
+        <!-- Pet Age Column -->
+        <ng-container matColumnDef="petAge">
+          <th mat-header-cell *matHeaderCellDef> Pet Age </th>
+          <td mat-cell *matCellDef="let element"> {{element.petAge}} </td>
+        </ng-container>
+    
+        <!-- Date of Add Column -->
+        <ng-container matColumnDef="dateOfAdd">
+          <th mat-header-cell *matHeaderCellDef> Date Of Add </th>
+          <td mat-cell *matCellDef="let element"> {{element.dateOfAdd}} </td>
+        </ng-container>
+    
+        <!-- Date of Exit Column -->
+        <ng-container matColumnDef="dateOfExit">
+          <th mat-header-cell *matHeaderCellDef> Date Of Exit </th>
+          <td mat-cell *matCellDef="let element"> {{element.dateOfExit}} </td>
+        </ng-container>
+    
+        <!-- Pet Gender Column -->
+        <ng-container matColumnDef="petGender">
+          <th mat-header-cell *matHeaderCellDef> Gender </th>
+          <td mat-cell *matCellDef="let element"> {{element.petGender}} </td>
+        </ng-container>
+    
+        <!-- Pet Category Column -->
+        <ng-container matColumnDef="petCategory">
+          <th mat-header-cell *matHeaderCellDef> Pet Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.petCategory}} </td>
+        </ng-container>
+    
+        <!-- Pet Routine Column -->
+        <ng-container matColumnDef="petRoutine">
+          <th mat-header-cell *matHeaderCellDef> Pet Routine </th>
+          <td mat-cell *matCellDef="let element"> {{element.petRoutine}} </td>
+        </ng-container>
+    
+        <!-- Pet Food Column -->
+        <ng-container matColumnDef="petFood">
+          <th mat-header-cell *matHeaderCellDef> Pet Food </th>
+          <td mat-cell *matCellDef="let element"> {{element.petFood}} </td>
+        </ng-container>
+    
+        <!-- Pet Diet Routine Column -->
+        <ng-container matColumnDef="petDietRoutine">
+          <th mat-header-cell *matHeaderCellDef> Pet Diet Routine </th>
+          <td mat-cell *matCellDef="let element"> {{element.petDietRoutine}} </td>
+        </ng-container>
+    
+        <!-- Pet Dose Column -->
+        <ng-container matColumnDef="petDose">
+          <th mat-header-cell *matHeaderCellDef> Dose </th>
+          <td mat-cell *matCellDef="let element"> {{element.petDose}} </td>
+        </ng-container>
+    
+        <!-- Pet Dose Routine Column -->
+        <ng-container matColumnDef="petDoseRoutine">
+          <th mat-header-cell *matHeaderCellDef> Dose Routine </th>
+          <td mat-cell *matCellDef="let element"> {{element.petDoseRoutine}} </td>
+        </ng-container>
+    
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let element">
+        
+            <button mat-flat-button color="warn" (click)="deletePet(element.petId)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+    
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>
